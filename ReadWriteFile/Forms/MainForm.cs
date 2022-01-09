@@ -6,17 +6,17 @@ using System.Windows.Forms;
 
 namespace ReadWriteFile
 {
-    public partial class MainForm : Form
+    public partial class TeachersForm : Form
     {
         private readonly ITeacherService _teacherService;
         private readonly IStudentService _studentService;
-        private SecondForm _secondForm;
+        private StudentsForm _secondForm;
         private readonly _IAppCache _appCache;
 
-        public MainForm(
+        public TeachersForm(
             ITeacherService teacherService,
             IStudentService studentService,
-            SecondForm secondForm,
+            StudentsForm secondForm,
             _IAppCache appCache)
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace ReadWriteFile
             _secondForm = secondForm;
             _appCache = appCache;
         }
-        private void MainForm_Load(object sender, EventArgs e)
+        private void TeachersForm_Load(object sender, EventArgs e)
         {
             RefreshTeachers();
         }

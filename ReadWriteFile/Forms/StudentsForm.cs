@@ -6,12 +6,12 @@ using System.Windows.Forms;
 
 namespace ReadWriteFile
 {
-    public partial class SecondForm : Form
+    public partial class StudentsForm : Form
     {
         private readonly IStudentService _studentService;
         private readonly _IAppCache _appCache;
 
-        public SecondForm(
+        public StudentsForm(
             IStudentService studentService,
             _IAppCache appCache)
         {

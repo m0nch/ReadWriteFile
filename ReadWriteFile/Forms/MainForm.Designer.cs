@@ -1,6 +1,6 @@
 ﻿namespace ReadWriteFile
 {
-    partial class MainForm
+    partial class TeachersForm
     {
         /// <summary>
         /// Required designer variable.
@@ -269,15 +269,15 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // MainForm
+            // TeachersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 551);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "MainForm";
+            this.Name = "TeachersForm";
             this.Text = "Teachers";
-            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Load += new System.EventHandler(this.TeachersForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdTeachers)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();

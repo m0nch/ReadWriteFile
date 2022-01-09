@@ -23,8 +23,8 @@ namespace ReadWriteFile
 
             using(ServiceProvider serviceProvider = services.BuildServiceProvider())
             {
-                var mainForm = serviceProvider.GetRequiredService<MainForm>();
-                Application.Run(mainForm);
+                var teachersForm = serviceProvider.GetRequiredService<TeachersForm>();
+                Application.Run(teachersForm);
             }
         }
         private static void ConfigureService(IServiceCollection services)
@@ -34,8 +34,8 @@ namespace ReadWriteFile
             services.AddDbContext()
                     .AddRepositories()
                     .AddServices()
-                    .AddScoped<MainForm>()
-                    .AddScoped<SecondForm>();
+                    .AddScoped<TeachersForm>()
+                    .AddScoped<StudentsForm>();
         }
     }
 }

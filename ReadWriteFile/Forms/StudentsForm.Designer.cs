@@ -1,6 +1,6 @@
 ﻿namespace ReadWriteFile
 {
-    partial class SecondForm
+    partial class StudentsForm
     {
         /// <summary>
         /// Required designer variable.
