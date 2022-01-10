@@ -17,9 +17,25 @@ namespace ReadWriteFile.Data.DB
 
         public DbContext()
         {
-            TxtTeachers = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).FullName).FullName + "\\TXT\\dataT.txt";
-            TxtStudents = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).FullName).FullName + "\\TXT\\dataS.txt";
-            TxtTemp = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).FullName).FullName + "\\TXT\\temp.txt";
+            var files = Directory.GetFiles(Environment.CurrentDirectory.Replace("\\bin\\Debug", ""), "*.txt", SearchOption.AllDirectories);
+            foreach (var file in files)
+            {
+                if (file.Contains("dataT"))
+                {
+                    TxtTeachers = file;
+                }
+                else if (file.Contains("dataS"))
+                {
+                    TxtStudents = file;
+                }
+                else if (file.Contains("temp"))
+                {
+                    TxtTemp = file;
+                }
+            }
+            //TxtTeachers = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).FullName).FullName + "\\TXT\\dataT.txt";
+            //TxtStudents = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).FullName).FullName + "\\TXT\\dataS.txt";
+            //TxtTemp = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).FullName).FullName + "\\TXT\\temp.txt";
         }
 
         StreamWriter _streamWriter;
