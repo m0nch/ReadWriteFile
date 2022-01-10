@@ -14,11 +14,12 @@ namespace ReadWriteFile.Data.DB
         public string TxtTeachers { get; set; }
         public string TxtStudents { get; set; }
         public string TxtTemp { get; set; }
+
         public DbContext()
         {
-            TxtTeachers = @"C:\Users\Monch\source\repos\ReadWriteFile\ReadWriteFile.Data\TXT\dataT.txt";
-            TxtStudents = @"C:\Users\Monch\source\repos\ReadWriteFile\ReadWriteFile.Data\TXT\dataS.txt";
-            TxtTemp = @"C:\Users\Monch\source\repos\ReadWriteFile\ReadWriteFile.Data\TXT\temp.txt";
+            TxtTeachers = Environment.CurrentDirectory + "\\TXT\\dataT.txt";
+            TxtStudents = Environment.CurrentDirectory + "\\TXT\\dataS.txt";
+            TxtTemp = Environment.CurrentDirectory + "\\TXT\\temp.txt";
         }
 
         StreamWriter _streamWriter;

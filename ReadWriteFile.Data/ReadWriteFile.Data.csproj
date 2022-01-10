@@ -64,10 +64,5 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Content Include="TXT\dataS.txt" />
-    <Content Include="TXT\dataT.txt" />
-    <Content Include="TXT\temp.txt" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
